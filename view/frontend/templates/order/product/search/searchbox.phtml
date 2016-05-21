@@ -1,0 +1,48 @@
+<?php
+/**
+ * Copyright © 2015 Magenest. All rights reserved.
+ * See COPYING.txt for license details.
+ *
+ * @category  Magenest
+ */
+?>
+<form class="form-product-new"  method="post" id="form-validate" enctype="multipart/form-data"
+      action="<?php echo $block->getDataForm() ?>"
+      data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>">
+
+    <div>
+        <input name="form_key" value="<?php echo $block->getFormKey() ?>" type="hidden">
+    </div>
+    <div class="control">
+        <input type="text" name="input-text" id="input-text"
+               placeholder="<?php /* @escapeNotVerified */ echo __('search name....'); ?>"
+               class="input-text"
+               style="width: 200px;" value=""
+        >
+    </div>
+    <div class="actions">
+        <button type="submit" id="submit" onclick="myFunction()" >
+            <span><?php /* @escapeNotVerified */ echo __('Search'); ?></span>
+        </button>
+    </div>
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td colspan="2">Search</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                <input type="text" name="query" size="15"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" name="search" value="Search"/>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--    </table>-->
+</form>
+<p id="demo"></p>
+<script>
+    function myFunction() {
+        var x = document.getElementById("input-text").value;
+        document.getElementById("demo").innerHTML = x;
+    }
+</script>

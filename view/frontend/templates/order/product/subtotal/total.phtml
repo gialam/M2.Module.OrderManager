@@ -1,0 +1,32 @@
+<?php
+/**
+ * Copyright © 2015 Magenest. All rights reserved.
+ * See COPYING.txt for license details.
+ *
+ * @category  Magenest
+ */
+?>
+<?php
+
+$_data = $block->getTotalInfo();
+$symbol = $_data['symbol'];
+$discount = $_data['discount'];
+$subtotal = $_data['subtotal'];
+$shipping = $_data['shipping_handling'];
+$tax = $_data['tax'];
+$grandtotal = $_data['grandtotal'];
+?>
+
+<div align="right">
+    <font size="5" color="red">New Total</font></br>
+    <?php echo  'Discount:'.$symbol.$discount; ?>
+    <br>
+    <?php echo  'Subtotal:'.$symbol.$subtotal; ?>
+    <br>
+    <?php echo  'Shipping & Handling :'.$symbol.$shipping; ?>
+    </br>
+    <?php echo  'Tax:'.$symbol.$tax; ?>
+    <br>
+    <?php echo  'Grand Total:'.$symbol.$grandtotal; ?>
+    </br>
+</div>
